@@ -14,3 +14,4 @@ jobs:
         uses: actions/script@v7
         with:
           script: return "Hello!"
+          result-encoding: string
