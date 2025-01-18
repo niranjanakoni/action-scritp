@@ -5,7 +5,7 @@ on:
 
 jobs:
   script-job:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -13,6 +13,7 @@ jobs:
       - name: Run a one-line script
         uses: actions/script@v7
         with:
-          script: return "Hello!"
           result-encoding: string
           retries: 3
+          script: consloe.log(context)
+          
